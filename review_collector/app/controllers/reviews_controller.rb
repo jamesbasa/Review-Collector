@@ -4,13 +4,28 @@ require 'nokogiri'
 class ReviewsController < ApplicationController
     VALID_LENDER_TYPES = ['mortgage', 'personal', 'business', 'student', 'automotive', 'credit repair', 'debt relief', 'investment'].freeze
 
+    def lendingtree
+        # TODO - more error handling
+        lender_type = params[:lender_type]&.downcase
+        lender_name = params[:lender_name]
+        lender_id = params[:lender_id]
+
+        # TODO - add pagination params?
+
+        if lender_type.present? && lender_name.present? && lender_id.present? && VALID_LENDER_TYPES.include?(lender_type)
+            collect_lendingtree_reviews(lender_type, lender_name, lender_id)
+        else
+            render json: { error: "Invalid parameters" }, status: :unprocessable_entity
+        end
+    end
+
     def lendingtree_form
         lender_type = params[:lender_type]&.downcase
         lender_name = params[:lender_name]
         lender_id = params[:lender_id]
 
         # TODO refactor
-        if request.get? && lender_type.present? && lender_name.present? && lender_id.present?
+        if lender_type.present? && lender_name.present? && lender_id.present?
             unless VALID_LENDER_TYPES.include?(lender_type)
                 flash[:error] = "Invalid lender type"
                 redirect_to reviews_lendingtree_path
