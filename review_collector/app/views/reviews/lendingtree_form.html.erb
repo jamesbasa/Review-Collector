@@ -1,0 +1,56 @@
+<h1>LendingTree Review Collector</h1>
+
+<%= form_tag reviews_lendingtree_path, method: :get do %>
+    <table>
+        <tr>
+            <td><label for="lender_type">Lender Type</label></td>
+            <td><%= text_field_tag :lender_type, 'business' %></td>
+        </tr>
+        <tr>
+            <td><label for="lender_name">Lender Name</label></td>
+            <td><%= text_field_tag :lender_name %></td>
+        </tr>
+        <tr>
+            <td><label for="lender_id">Lender ID</label></td>
+            <td><%= text_field_tag :lender_id %></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td><%= submit_tag "Collect Reviews" %></td>
+        </tr>
+    </table>
+<% end %>
+
+<% if @reviews.nil? %>
+    <p>Please fill out the fields and click the button to collect reviews.</p>
+<% elsif @reviews.empty? %>
+    <p>No reviews found.</p>
+<% else %>
+    <h2>Reviews: <%= @reviews.count %> Total</h2>
+    <table class="reviews-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Star Rating</th>
+                <th>Date</th>
+                <th>Recommended</th>
+                <th>Closed With Lender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @reviews.each do |review| %>
+                <tr>
+                    <td><%= review.title %></td>
+                    <td><%= review.content %></td>
+                    <td><%= review.author %></td>
+                    <td><%= review.star_rating %></td>
+                    <td><%= review.date %></td>
+                    <td><%= review.recommended %></td>
+                    <td><%= review.closed_with_lender %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+<% end %>
