@@ -7,8 +7,7 @@ class ReviewsController < ApplicationController
     def lendingtree
         # TODO - more error handling
         # TODO - add pagination params?
-
-        if valid_params?
+        if present_params? && valid_lender_type?
             collect_lendingtree_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
         else
             render json: { error: "Invalid parameters" }, status: :unprocessable_entity
@@ -16,22 +15,31 @@ class ReviewsController < ApplicationController
     end
 
     def lendingtree_form
-        if valid_params?
-            @reviews = collect_lendingtree_reviews(lender_type, lender_name, lender_id)
-        else
-            flash[:error] = "Invalid parameters"
-            redirect_to reviews_lendingtree_path
+        if present_params?
+            unless valid_lender_type?
+                flash[:error] = "Invalid lender type"
+                redirect_to reviews_lendingtree_path
+                return
+            end
+
+            @reviews = collect_lendingtree_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
         end
     end
 
     private
 
-    def valid_params?
-        lender_type = params[:lender_type]&.downcase
+    def present_params?
+        lender_type = params[:lender_type]
         lender_name = params[:lender_name]
         lender_id = params[:lender_id]
 
-        lender_type.present? && lender_name.present? && lender_id.present? && VALID_LENDER_TYPES.include?(lender_type)
+        lender_type.present? && lender_name.present? && lender_id.present?
+    end
+
+    def valid_lender_type?
+        lender_type = params[:lender_type]&.downcase
+
+        VALID_LENDER_TYPES.include?(lender_type)
     end
 
     def collect_lendingtree_reviews(lender_type, lender_name, lender_id)
