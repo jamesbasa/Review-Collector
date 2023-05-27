@@ -1,6 +1,10 @@
 <h1>LendingTree Review Collector</h1>
 
 <%= form_tag reviews_lendingtree_path, method: :get do %>
+    <% if flash[:error].present? %>
+        <p class="error"><%= flash[:error] %></p>
+    <% end %>
+
     <table>
         <tr>
             <td><label for="lender_type">Lender Type</label></td>
@@ -22,7 +26,7 @@
 <% end %>
 
 <% if @reviews.nil? %>
-    <p>Please fill out the fields and click the button to collect reviews.</p>
+    <p>Please fill out all of the fields and click the button to collect reviews.</p>
 <% elsif @reviews.empty? %>
     <p>No reviews found.</p>
 <% else %>
