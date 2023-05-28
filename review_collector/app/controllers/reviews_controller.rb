@@ -3,22 +3,22 @@ require 'nokogiri'
 
 class ReviewsController < ApplicationController
     VALID_LENDER_TYPES = ['mortgage', 'personal', 'business', 'student', 'automotive', 'credit repair', 'debt relief', 'investment'].freeze
+    INVALID_LENDER_TYPE_MESSAGE = "Invalid lender type"
 
     def lendingtree
-        # TODO - more error handling
         # TODO - add pagination params?
-        if present_params? && valid_lender_type?
+        if valid_lender_type?
             reviews = LendingtreeService.collect_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
             render json: { reviews: reviews }
         else
-            render json: { error: "Invalid parameters" }, status: :unprocessable_entity
+            render json: { error: INVALID_LENDER_TYPE_MESSAGE }, status: :unprocessable_entity
         end
     end
 
     def lendingtree_form
         if present_params?
             unless valid_lender_type?
-                flash[:error] = "Invalid lender type"
+                flash[:error] = INVALID_LENDER_TYPE_MESSAGE
                 redirect_to reviews_lendingtree_path
                 return
             end
