@@ -1,0 +1,556 @@
+{
+    "total": 15,
+    "filteredCount": 15,
+    "result": {
+        "statistics": null,
+        "reviews": [
+            {
+                "id": "60ab83b14177a567e8bb7dab",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Beware ",
+                "text": "3 months ago I applied for a PPP loan through this company this company claimed that the SBA denied my loan due to my criminal history which in the passed 5yrs the only criminal history that I have is tickets but anyway the company sends me an email after 50 emails and phone calls telling me to fill something out to Appeal the SBA decision I did as asked and 1 month and 150 emails later and phone calls I haven't heard anything back from anyone since. This is tragic and the sad thing is I have a real life legit business and the fraudsters have gotten money but I can't get nothing this is BS at its fullest. ",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "dc5825f1-3576-4252-8df4-e5724a003ba2",
+                "authorName": "Phillip",
+                "userLocation": "Lehigh Acres, FL",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "false"
+                    }
+                ],
+                "submissionDateTime": "2021-05-24T06:45:05.157+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "60a2a3c61f17c6576d8e9d01",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Misleading Loan process leads to personal credit damage",
+                "text": "We initiated the loan process with Dream Spring to receive an SBA backed loan. After providing years of financial records for our business, personal financial statements, and multiple other qualifying documents we were told the SBA loan was not an option, but other business loans were available. The end story is that the \"business loan\" we were given was a \"personal\" loan, they pulled credit scores from all 3 agencies which significantly negatively impacted personal credit. Now, instead of having a business loan I have a personal loan for $23,000 on my credit report. I could have walked into my bank and received a personal loan for twice as much without the credit pulls and knocks on my personal credit file. There was NO communication that this would happen, nor was it disclosed in loan documents. In fact, throughout the email process it was stated multiple times it was a business loan, it wasn't, that the credit pull would only happen with one reporting agency, it didn't. Transparency and proper expectations are critical to small business decisions, Dream Spring failed on both accounts in this manner. ",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "95fcea6c-61a2-4c64-95e5-9ec187764b81",
+                "authorName": "Peter",
+                "userLocation": "Zephyr Cove, NV",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2021-05-17T13:11:34.446+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "6080af2764407e6f0a1f1965",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Worst experience ever",
+                "text": "I applied through third party and had to sign several documents over and over again. They claim they sent ach but my bank say there never received anything from them. I called and left several messages and thet returned call but weeks later sent a message blaming the third party. I check caweb and it’s states lender cancelled. No explanation why?",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "ef11eb30-6009-457d-85c8-aff5ae3c1765",
+                "authorName": "Keona",
+                "userLocation": "Mooresville, NC",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "false"
+                    }
+                ],
+                "submissionDateTime": "2021-04-21T19:03:03.343+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "6075bb47377e9f5f09a16f42",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Use ANY other company. Absolute trash",
+                "text": "I have been trying to get in contact with their company for MONTHS. I have left a total of 12 messages without any call back, email response or any type of attempt to communicate with me. This is hands down the worst company to ever conduct business with. They approved then reversed my loan amount without any explanation. Please do yourself a favor and use ANY other company ",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "a3d3bd46-1e51-4ec2-b565-2fe0eb957fe1",
+                "authorName": "Michael",
+                "userLocation": "Tucson, AZ",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2021-04-13T11:39:50.713+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "60651bdb377e9f5f09a1686d",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "They won’t tell you how long till you’re getting your funds!! PPP",
+                "text": "I applied for my PPP Loan via Womply this lender says they were wet Womply But they want you to contact them instead of tell you when you’re going to get your money well if they work with them why do I have to call them and ask them? Because Womply doesn’t answer the phone either. But they did say that most lenders after the promissory note is fine 2 to 3 business days to get your money I don’t believe that’s the case with this bank",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "394fea98-8303-4de7-b4a2-ca2abdf95d40",
+                "authorName": "Susan",
+                "userLocation": "Fort Myers, FL",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating"
+                    },
+                    {
+                        "name": "FeesAndCostsRating"
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "false"
+                    }
+                ],
+                "submissionDateTime": "2021-03-31T21:03:23.231+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "5e9650acf2d6c900012ad540",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Worthless",
+                "text": "This is the most worthless lending company (other than the one you can eat only spelled differently ) that I've dealt with!! DO NOT let these sorry people fund your \"business loan\". It will go against your personal credit. When it does that it will jack up your personal credit DTI. In my case, it cost me 40 points on my personal FICO score. Such a load of... A BUSINESS loan should report to my D&B, Experian Business, and/or Equifax Small Business like any other business loan/financing. But not with these useless hacks. They don't even bother to tell you upfront that it will report to your personal credit report. Had I know, I NEVER would have signed the loan paperwork. Bait and switch nonsense from a bunch of sorry hacks!! And, when I called them out on it, they were like, \"Oh well\"!!!!! Don't waste your efforts.",
+                "isRecommended": false,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "5d776576-b9e4-4521-9343-ba87e496a125",
+                "authorName": "Scott",
+                "userLocation": "Atlanta, GA",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 1,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 1.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2020-04-14T20:09:16.423+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "5e686ee0ff5eaf0001eff92d",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "It has been a great experience",
+                "text": "The DreamSpring agent Kevin made securing this loan almost easy especially with me not sure I would be approved for use of funds for our Non Profit Military and Veterans Support Company. ",
+                "isRecommended": true,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "",
+                "authorName": "Robert",
+                "userLocation": "COLORADO SPRINGS, CO",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 5,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 5.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2020-03-11T00:53:51.287+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "5e5747fdad1817000167f977",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Very good experience",
+                "text": "I'm happy with the overall exp*******.They were very friendly and informative .Felt very comfortable",
+                "isRecommended": true,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "",
+                "authorName": "Laverne",
+                "userLocation": "ROSWELL, NM",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 5,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 5.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2020-02-26T23:39:24.199+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "5e39f02aa2f1e80001ab5ab9",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "It was good experience",
+                "text": "The entire process was easy, employee help me get through the whole process. Very understandable. Thanks",
+                "isRecommended": true,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "",
+                "authorName": "Lou",
+                "userLocation": "CUBA, NM",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": false,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 5,
+                    "name": "Overallrating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "RateRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 5.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    },
+                    {
+                        "name": "IsLoanClosed",
+                        "value": "true"
+                    }
+                ],
+                "submissionDateTime": "2020-02-04T17:28:58.133+00:00",
+                "experienceReviewId": 0
+            },
+            {
+                "id": "5d1b731cafb8510001ae7569",
+                "productId": "45275",
+                "productType": "lender",
+                "title": "Accion has been wonderful to us",
+                "text": "Accion has been wonderful to us as we build our business in New Mexico.<br />We relocated to Arizona and are on loan 2, as we expand our services. <br />Both loans have been easy and very fair.<br />We appreciate the help and encouragement services as well as the financing.",
+                "isRecommended": true,
+                "authorId": "",
+                "authorEmail": "",
+                "anonymousUId": "ffcf7318-6095-4d00-bfed-16243c6238a2",
+                "authorName": "Ellery",
+                "userLocation": "Tucson, AZ",
+                "brandId": "45275",
+                "lenderId": 88123758,
+                "isAuthenticated": true,
+                "isVerifiedCustomer": false,
+                "votesUp": 0,
+                "votesDown": 0,
+                "isFlagged": false,
+                "comments": null,
+                "primaryRating": {
+                    "value": 5,
+                    "name": "OverallRating"
+                },
+                "secondaryRatings": [
+                    {
+                        "name": "CustomerServiceRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "FeesAndCostsRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "RateRating",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "ResponsivenessRating",
+                        "value": 5.0
+                    }
+                ],
+                "properties": [
+                    {
+                        "name": "RequestType",
+                        "value": "Small Business Loan"
+                    }
+                ],
+                "submissionDateTime": "2018-10-01T00:00:00+00:00",
+                "experienceReviewId": 0
+            }
+        ]
+    },
+    "cacheKey": "Br:45275-Is:False-Is:False-Le:0-Mo:Approved-Of:0-Ov:0-Pa:0-Pa:10-Re:reviews-So:ReviewSubmitted-So:desc",
+    "success": true,
+    "message": ""
+}
