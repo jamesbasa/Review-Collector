@@ -8,15 +8,15 @@
     <table>
         <tr>
             <td><label for="lender_type">Lender Type</label></td>
-            <td><%= text_field_tag :lender_type, 'business' %></td>
+            <td><%= text_field_tag :lender_type, 'business', required: 'required' %></td>
         </tr>
         <tr>
             <td><label for="lender_name">Lender Name</label></td>
-            <td><%= text_field_tag :lender_name %></td>
+            <td><%= text_field_tag :lender_name, nil, required: 'required' %></td>
         </tr>
         <tr>
             <td><label for="lender_id">Lender ID</label></td>
-            <td><%= text_field_tag :lender_id %></td>
+            <td><%= text_field_tag :lender_id, nil, required: 'required' %></td>
         </tr>
         <tr></tr>
         <tr>
