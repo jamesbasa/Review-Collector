@@ -34,25 +34,27 @@
     <table class="reviews-table">
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Title</th>
                 <th>Content</th>
                 <th>Author</th>
+                <th>Location</th>
                 <th>Star Rating</th>
                 <th>Date</th>
                 <th>Recommended</th>
-                <th>Closed With Lender</th>
             </tr>
         </thead>
         <tbody>
             <% @reviews.each do |review| %>
                 <tr>
+                    <td><%= review.review_id %></td>
                     <td><%= review.title %></td>
                     <td><%= review.content %></td>
                     <td><%= review.author %></td>
+                    <td><%= review.user_location %></td>
                     <td><%= review.star_rating %></td>
                     <td><%= review.date %></td>
                     <td><%= review.recommended %></td>
-                    <td><%= review.closed_with_lender %></td>
                 </tr>
             <% end %>
         </tbody>
