@@ -6,13 +6,16 @@ class ReviewsController < ApplicationController
     INVALID_LENDER_TYPE_MESSAGE = "Invalid lender type"
 
     def lendingtree
-        # TODO - add pagination params?
         if valid_lender_type?
             reviews = LendingtreeService.collect_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
             render json: { reviews: reviews }
         else
             render json: { error: INVALID_LENDER_TYPE_MESSAGE }, status: :unprocessable_entity
         end
+    rescue LendingtreeService::BrandIdError => e
+        render json: { error: e.message }, status: :internal_server_error
+    rescue LendingtreeService::ReviewCollectionError => e
+        render json: { error: e.message }, status: :internal_server_error
     end
 
     def lendingtree_form
@@ -25,6 +28,10 @@ class ReviewsController < ApplicationController
 
             @reviews = LendingtreeService.collect_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
         end
+    rescue LendingtreeService::BrandIdError, LendingtreeService::ReviewCollectionError, StandardError => e
+        flash[:error] = e.message
+        redirect_to reviews_lendingtree_path
+        return
     end
 
     private
