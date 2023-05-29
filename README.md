@@ -4,6 +4,7 @@
 An API that collects reviews from [Lendingtree](https://www.lendingtree.com/reviews).
 
 ## Project Structure
+```
 review_collector/
 ├── app/
 │   ├── controllers/
@@ -21,13 +22,14 @@ review_collector/
 │   ├── controllers/
 │   │   └── reviews_controller_spec.rb
 │   ├── fixtures/
-│   │   └── *several*
+│   │   └── (several)
 │   └── models/
 │   │   └── review_spec.rb
 │   └── services/
 │       └── lendingtree_service_spec.rb
-├── Gemfile
+└── Gemfile
 README.md
+```
 
 ## Usage Instructions
 ### How to run via frontend
