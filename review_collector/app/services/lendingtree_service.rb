@@ -1,8 +1,8 @@
 class LendingtreeService
     MAX_PAGE_SIZE = 400
 
-    class BrandIdError < StandardError
-        def initialize(message = "Unable to retrieve brand ID")
+    class ParsingError < StandardError
+        def initialize(message = "Unable to retrieve data from the webpage")
             super
         end
     end
@@ -19,7 +19,7 @@ class LendingtreeService
         reviews = []
         page = 0
 
-        brand_id = get_brand_id(lender_type, lender_name, lender_id)
+        brand_id, nonce_value = get_brand_id_and_nonce(lender_type, lender_name, lender_id)
 
         while true
             url = "https://www.lendingtree.com/wp-json/review/proxy?"\
@@ -28,15 +28,14 @@ class LendingtreeService
                   "AuthorLocation=All&OverallRating=0&_t=1685253503993"
             headers = {
                 # 'Accept-Language': 'en-US,en;q=0.9',
-                # 'Referer': 'https://www.lendingtree.com/reviews/personal/zable/135373435?sort=&pid=2',
                 # 'Origin': 'https://www.lendingtree.com',
                 # 'X-Requested-With': 'XMLHttpRequest',
-                'X-Wp-Nonce': '5c820001b6'
+                'X-Wp-Nonce': nonce_value
             }
             response = HTTParty.get(url, headers: headers)
             raise ReviewCollectionError unless response.success?
 
-            reviews_hash = JSON.parse(response)['result']['reviews']
+            reviews_hash = JSON.parse(response).dig('result', 'reviews')
             break if reviews_hash.blank?
 
             reviews_hash.each do |review|
@@ -45,7 +44,7 @@ class LendingtreeService
                 content = review['text']
                 author = review['authorName']
                 user_location = review['userLocation']
-                star_rating = review['primaryRating']['value']&.to_i
+                star_rating = review.dig('primaryRating', 'value')&.to_i
                 date = Date.parse(review['submissionDateTime'])
                 recommended = review['isRecommended']
 
@@ -58,7 +57,7 @@ class LendingtreeService
         reviews
     rescue ArgumentError
         raise
-    rescue BrandIdError
+    rescue ParsingError
         raise
     rescue HTTParty::Error, StandardError => e
         raise ReviewCollectionError
@@ -70,18 +69,22 @@ class LendingtreeService
         raise ArgumentError, "Invalid parameters" unless lender_type.present? && lender_name.present? && lender_id.present?
     end
 
-    def self.get_brand_id(lender_type, lender_name, lender_id)
+    def self.get_brand_id_and_nonce(lender_type, lender_name, lender_id)
         url = "https://www.lendingtree.com/reviews/#{lender_type}/#{lender_name}/#{lender_id}"
         response = HTTParty.get(url)
-        raise BrandIdError unless response.success?
+        raise ParsingError unless response.success?
 
         doc = Nokogiri::HTML(response.body)
 
         brand_id = doc.at_css('button.write-review[data-lenderreviewid]')&.attr('data-lenderreviewid')&.to_s
-        raise BrandIdError unless brand_id
+        raise ParsingError unless brand_id
 
-        brand_id
+        nonce_value = doc.at_css('script#jquery-core-js-extra').text.match(/"nonce":"([^"]+)"/)&.captures&.first
+        Rails.logger.error("nonce: #{doc.at_css('script#jquery-core-js-extra').text}")
+        raise ParsingError unless nonce_value
+
+        [brand_id, nonce_value]
     rescue HTTParty::Error, StandardError => e
-        raise BrandIdError
+        raise ParsingError
     end
 end

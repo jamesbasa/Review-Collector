@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
         else
             render json: { error: INVALID_LENDER_TYPE_MESSAGE }, status: :unprocessable_entity
         end
-    rescue LendingtreeService::BrandIdError => e
+    rescue LendingtreeService::ParsingError => e
         render json: { error: e.message }, status: :internal_server_error
     rescue LendingtreeService::ReviewCollectionError => e
         render json: { error: e.message }, status: :internal_server_error
@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
 
             @reviews = LendingtreeService.collect_reviews(params[:lender_type], params[:lender_name], params[:lender_id])
         end
-    rescue LendingtreeService::BrandIdError, LendingtreeService::ReviewCollectionError, StandardError => e
+    rescue LendingtreeService::ParsingError, LendingtreeService::ReviewCollectionError, StandardError => e
         flash[:error] = e.message
         redirect_to reviews_lendingtree_path
         return

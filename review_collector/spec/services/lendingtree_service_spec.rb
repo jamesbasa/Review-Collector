@@ -48,7 +48,7 @@ RSpec.describe LendingtreeService do
 
                 expect {
                     subject
-                }.to raise_error(LendingtreeService::BrandIdError)
+                }.to raise_error(LendingtreeService::ParsingError)
             end
 
             it 'raises an error given an HTTParty::Error' do
@@ -57,7 +57,7 @@ RSpec.describe LendingtreeService do
 
                 expect {
                     subject
-                }.to raise_error(LendingtreeService::BrandIdError)
+                }.to raise_error(LendingtreeService::ParsingError)
             end
         end
 
@@ -81,7 +81,7 @@ RSpec.describe LendingtreeService do
 
                     expect {
                         subject
-                    }.to raise_error(LendingtreeService::BrandIdError)
+                    }.to raise_error(LendingtreeService::ParsingError)
                 end
             end
 

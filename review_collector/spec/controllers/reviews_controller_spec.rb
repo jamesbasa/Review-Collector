@@ -6,7 +6,7 @@ RSpec.describe ReviewsController, type: :controller do
     let(:lender_id) { '123' }
     let(:brand_id) { '321' }
 
-    #  ideally would use factories such as Factory Bot
+    #  Future consideration: use factories such as Factory Bot
     let(:review1) { Review.new("1", brand_id, "Title", "Good service", "Mike", "Pleasanton, CA", "4", Date.new(2023, 04, 01), true) }
     let(:review2) { Review.new("2", brand_id, "Title", "Great service", "Jim", "Pleasanton, CA", "5", Date.new(2023, 05, 01), true) }
 
@@ -63,13 +63,13 @@ RSpec.describe ReviewsController, type: :controller do
                   end
             end
 
-            it 'returns an error given BrandIdError' do
-                allow(LendingtreeService).to receive(:collect_reviews).and_raise(LendingtreeService::BrandIdError)
+            it 'returns an error given ParsingError' do
+                allow(LendingtreeService).to receive(:collect_reviews).and_raise(LendingtreeService::ParsingError)
 
                 get :lendingtree, params: valid_params
 
                 expect(response).to have_http_status(:internal_server_error)
-                expect(JSON.parse(response.body)['error']).to eq("Unable to retrieve brand ID")
+                expect(JSON.parse(response.body)['error']).to eq("Unable to retrieve data from the webpage")
             end
 
             it 'returns an error given ReviewCollectionError' do
@@ -104,12 +104,12 @@ RSpec.describe ReviewsController, type: :controller do
                 expect(assigns(:reviews)).to eq(reviews)
             end
 
-            it 'sets flash error and redirects given BrandIdError' do
-                allow(LendingtreeService).to receive(:collect_reviews).and_raise(LendingtreeService::BrandIdError)
+            it 'sets flash error and redirects given ParsingError' do
+                allow(LendingtreeService).to receive(:collect_reviews).and_raise(LendingtreeService::ParsingError)
 
                 get :lendingtree_form, params: valid_params
 
-                expect(flash[:error]).to eq("Unable to retrieve brand ID")
+                expect(flash[:error]).to eq("Unable to retrieve data from the webpage")
                 expect(response).to redirect_to(reviews_lendingtree_path)
             end
 
