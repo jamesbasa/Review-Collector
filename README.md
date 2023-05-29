@@ -1,15 +1,35 @@
 # Review-Collector
 
-### Requirements
-1. Please write in ruby or python
-2. Use this website: https://www.lendingtree.com/reviews/business
-3. Write a web service that accepts requests of 'business' URLs (i.e. https://www.lendingtree.com/reviews/business/ondeck/51886298)
-4. This service should collect all 'reviews' on the URL defined
-5. The response should consist of: title of the review, the content of review, author, star rating, date of review, and any other info you think would be relevant
-6. Write tests for your API
-7. No need to make a view and datastore is optional
-8. Error/bad request handling should be built out
+## Summary
+An API that collects reviews from [Lendingtree](https://www.lendingtree.com/reviews).
 
+## Project Structure
+review_collector/
+├── app/
+│   ├── controllers/
+│   │   └── reviews_controller.rb
+│   ├── models/
+│   │   └── review.rb
+│   ├── services/
+│   │   └── lendingtree_service.rb
+│   └── views/
+│       └── reviews/
+│           └── lendingtree_form.html.erb
+├── config/
+│   └── routes.rb
+├── spec/
+│   ├── controllers/
+│   │   └── reviews_controller_spec.rb
+│   ├── fixtures/
+│   │   └── *several*
+│   └── models/
+│   │   └── review_spec.rb
+│   └── services/
+│       └── lendingtree_service_spec.rb
+├── Gemfile
+README.md
+
+## Usage Instructions
 ### How to run via frontend
 1. Change into the rails directory using `cd review_collector`
 2. Start the server using `rails s`
@@ -18,6 +38,11 @@
 5. Click the button to collect reviews
 6. The reviews will be displayed in a table once they are collected
 
-### How to run via API/Postman/Curl
+### How to run via API (Postman)
+1. Access my Postman workspace here: https://www.postman.com/spacecraft-observer-56275265/workspace/review-collection
+2. Start the server locally using `rails s`
+3. Test GET requests using any of the configured Postman 'collections' in the workspace. Each has several Postman tests setup.
 
-### How to run tests
+### How to execute tests
+1. Change into the rails directory using `cd review_collector`
+2. Run all Rspecs using `rspec -fd spec`
