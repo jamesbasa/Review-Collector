@@ -80,7 +80,6 @@ class LendingtreeService
         raise ParsingError unless brand_id
 
         nonce_value = doc.at_css('script#jquery-core-js-extra').text.match(/"nonce":"([^"]+)"/)&.captures&.first
-        Rails.logger.error("nonce: #{doc.at_css('script#jquery-core-js-extra').text}")
         raise ParsingError unless nonce_value
 
         [brand_id, nonce_value]
