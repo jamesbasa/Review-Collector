@@ -69,6 +69,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'webmock'
+  gem 'rails-controller-testing'
 end
 
 # For web scraping
@@ -79,7 +81,3 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-group :test do
-  gem 'webmock'
-  gem 'rails-controller-testing'
-end
