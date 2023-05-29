@@ -44,8 +44,8 @@ README.md
 1. Change into the rails directory using `cd review_collector`
 2. Start the server using `rails s`
 3. Visit http://127.0.0.1:3000/reviews/lendingtree
+4. Fill out the `lender name` and `lender id`. The form requires you to. The `lender type` must also be a valid LendingTree lender type.
 <br><img src="review_collector/docs/screenshots/reviews_form_fields_unpopulated.png" width="400" alt="Form with unpopulated fields">
-4. Fill out the `lender name` and `lender id`. The form requires you to.
 <br><img src="review_collector/docs/screenshots/reviews_form_fields_invalid_lender.png" width="400" alt="Form with invalid lender">
 5. Click the button to collect reviews
 <br><img src="review_collector/docs/screenshots/reviews_form_fields_populated.png" width="400" alt="Form with populated fields">
